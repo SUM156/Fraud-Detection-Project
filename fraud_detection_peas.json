@@ -1,0 +1,81 @@
+{
+  "system_name": "Fraud Detection System for Digital Payments and Banking",
+  "student": {
+    "name": "Sumair Ahmed",
+    "roll_number": "2k24/AIE/62",
+    "department": "Artificial Intelligence",
+    "university": "University of Sindh"
+  },
+  "peas": {
+    "performance_measures": [
+      "transaction_accuracy_rate_>=99.5_percent",
+      "false_positive_rate_minimised",
+      "false_negative_rate_minimised",
+      "avg_detection_latency_<200ms",
+      "financial_loss_prevented_per_period",
+      "customer_disruption_score_per_10k_transactions"
+    ],
+    "environment": {
+      "description": "Real-time digital financial ecosystem",
+      "channels": [
+        "online_banking_portals",
+        "payment_card_networks",
+        "interbank_settlement_systems",
+        "digital_wallets_UPI",
+        "ATM_networks"
+      ]
+    },
+    "actuators": [
+      "transaction_blocking_engine",
+      "account_freeze_module",
+      "risk_based_auth_trigger",
+      "customer_notification_system",
+      "case_management_API",
+      "model_feedback_writer"
+    ],
+    "sensors": [
+      "transaction_data_stream",
+      "geolocation_IP_intelligence",
+      "behavioural_biometric_analyser",
+      "device_fingerprinting_sensor",
+      "historical_transaction_DB_API",
+      "threat_intelligence_feed",
+      "card_velocity_counter"
+    ]
+  },
+  "environment_classification": {
+    "observability": {
+      "choice": "Partially Observable",
+      "justification": "Cardholder intent and compromised credentials are hidden at decision time."
+    },
+    "agents": {
+      "choice": "Multi-Agent",
+      "justification": "Co-exists with card-network rule engines, other bank agents, and adversarial fraudsters."
+    },
+    "determinism": {
+      "choice": "Stochastic",
+      "justification": "Identical features can yield different outcomes due to hidden variables."
+    },
+    "temporal_structure": {
+      "choice": "Sequential",
+      "justification": "Each decision affects future risk scoring; probe sequences precede high-value fraud."
+    },
+    "dynamism": {
+      "choice": "Dynamic",
+      "justification": "Fraud patterns and adversarial tactics evolve continuously during operation."
+    },
+    "state_space": {
+      "choice": "Continuous",
+      "justification": "Amounts, coordinates, time deltas, and risk scores are real-valued continuous variables."
+    }
+  },
+  "utility_function": {
+    "formula": "U = alpha * Recall_fraud - beta * FalsePositiveRate - gamma * DetectionLatency",
+    "default_weights": {
+      "alpha": 0.6,
+      "beta": 0.3,
+      "gamma": 0.1
+    },
+    "trade_off": "Security (fraud recall) vs Customer Experience (false positive rate)"
+  }
+}
