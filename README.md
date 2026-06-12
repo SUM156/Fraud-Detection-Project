@@ -6,7 +6,7 @@
 **Department:** Artificial Intelligence  
 **University:** University of Sindh  
 **Course:** Introduction to Artificial Intelligence  
-**Email:** sumairahmedero@gmail.com  
+**Email:** dsumairahmed@gmail.com  
 
 ---
 
